@@ -40,16 +40,17 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 // originalFlavors.pop();
-function is31Flavors(originalFlavors){
+function is31Flavors(arr){
     
-    if(originalFlavors === 31){
+    if(arr.length === 31){
         return true;
     }else{
         return false;
     }
 
 }
-console.log(is31Flavors(originalFlavors.length));
+console.log(is31Flavors(originalFlavors));
+
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
 Your function should accept:
