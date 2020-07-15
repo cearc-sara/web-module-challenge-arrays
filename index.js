@@ -64,11 +64,11 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(arr, flav){
     arr.unshift(flav);
-    
+    return arr;
 
 }
-addFlavor(originalFlavors, "Pecan");
-console.log(originalFlavors);
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
+
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -103,7 +103,7 @@ function getFlavorByIndex(arr, ind){
     }
 
 }
-console.log(getFlavorByIndex(originalFlavors, originalFlavors[5]));
+console.log(getFlavorByIndex(originalFlavors, originalFlavors[2]));
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -185,12 +185,15 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
-
-    /*code here*/
+function getAverageWordLength(arr){
+    let total = 0;
+    for(let i = 0; i < arr.length; i++){
+        total+=arr[i].length;
+    }
+    let avgNum = total/arr.length;
 
 }
-
+console.log(getAverageWordLength(originalFlavors));
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
@@ -273,8 +276,7 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
-
-    /*code here*/
+function getRandomFlavors(arr1, arr2, arr3, arr4){
+    let randomFlavors = 
 
 }
